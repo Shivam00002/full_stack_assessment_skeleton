@@ -1,18 +1,19 @@
+version: '3.8'
+
 services: 
   mysql_ctn_final:
-    build:
-      context: .
-      dockerfile: Dockerfile.final_db
+    image: mysql:8.0
     container_name: mysql_ctn_final
     environment:
       MYSQL_ROOT_PASSWORD: 6equj5_root
       MYSQL_DATABASE: home_db
       MYSQL_USER: db_user
       MYSQL_PASSWORD: 6equj5_db_user
-    volumes:
-      - mysql_vol_2:/var/lib/mysql:rw
     ports:
       - 3306:3306
+    volumes:
+      - mysql_vol_2:/var/lib/mysql
+      - ./00_init_db_dump.sql:/docker-entrypoint-initdb.d/00_init_db_dump.sql
     networks:
       - app_net_2
 

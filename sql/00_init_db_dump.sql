@@ -29,6 +29,9 @@ SET PERSIST local_infile = 1;
 -- Table structure for table `user_home`
 --
 
+
+
+
 DROP TABLE IF EXISTS `user_home`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */
 ;
@@ -50,6 +53,8 @@ CREATE TABLE `user_home` (
 --
 -- Dumping data for table `user_home`
 --
+
+
 
 LOCK TABLES `user_home` WRITE;
 /*!40000 ALTER TABLE `user_home` DISABLE KEYS */
