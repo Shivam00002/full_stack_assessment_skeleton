@@ -29,6 +29,8 @@ SET PERSIST local_infile = 1;
 -- Table structure for table `user_home`
 --
 
+volumes:
+  - ./00_init_db_dump.sql:/docker-entrypoint-initdb.d/00_init_db_dump.sql
 
 
 
